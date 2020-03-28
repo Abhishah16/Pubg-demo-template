@@ -1,0 +1,153 @@
+﻿<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<style>
+body
+{
+	font-family:Arial;
+	color:red;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+}
+h1
+{
+    color:powderblue;
+    margin-left: 20px;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script>
+function valform()
+{
+	var name=document.forms["form1"]["name"];
+	var add=document.forms["form1"]["add"];
+	var email=document.forms["form1"]["email"];
+	var remail=document.forms["form1"]["remail"];
+	var pass=document.forms["form1"]["pass"];
+	var rpass=document.forms["form1"]["rpass"];
+	var phone=document.forms["form1"]["phone"];
+	var aphone=document.forms["form1"]["aphone"];
+	var subject=document.forms["form1"]["subject"];
+
+	if(name.value.length>=20)
+	{
+		alert("you have crossed your limits");
+		name.focus();
+		return false;
+	}
+	if(name.value=="")
+	{
+		alert("please enter your name");
+		name.focus();
+		return false;
+	}
+	if(email.value.length>=30)
+	{
+		alert("you have crossed your limits");
+		email.focus();
+		return false;
+	}
+	if(email.value=="")
+	{
+		alert("please enter your email");
+		email.focus();
+		return false;
+	}
+	if(email.value.indexOf("@",0)<0)
+	{
+		alert("please enter a valid E-mail address");
+		email.focus();
+		return false;
+	}
+	if(email.value.indexOf(".",0)<0)
+	{
+		alert("please enter a valid E-mail address");
+		email.focus();
+		return false;
+	}
+	if(remail.value.length>=30)
+	{
+		alert("you have crossed your limits");
+		remail.focus();
+		return false;
+	}
+	if(remail.value=="")
+	{
+		alert("please enter your email");
+		remail.focus();
+		return false;
+	}
+	if(remail.value.indexOf("@",0)<0)
+	{
+		alert("please enter a valid E-mail address");
+		remail.focus();
+		return false;
+	}
+	if(remail.value.indexOf(".",0)<0)
+	{
+		alert("please enter a valid E-mail address");
+		remail.focus();
+		return false;
+	}
+	if(pass.value=="")
+	{
+		alert("please enter your password");
+		pass.focus();
+		return false;
+	}
+	if(rpass.value=="")
+	{
+		alert("please enter your password");
+		rpass.focus();
+		return false;
+	}
+	if(subject.selectedIndex<1)
+	{
+		alert("please select any one option");
+		subject.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body	background="pubg_desperado.jpg" >
+<h1>Registration form </h1>
+<form name="form1" action="http://localhost/project.php" method="post">
+	<p>Name: <input type="text" size=30 name="name"> </p><br>
+
+
+	<p>pubg id: <input type="text" size=30 name="add"> </p><br>
+
+
+	<p>E-mail Address: <input type="text" size=30 name="email"> </p><br>
+
+	<p>Alt E-mail Address: <input type="text" size=30 name="remail"> </p><br>
+
+	<p>pubg rank: <input type="text" size=30 name="pass"> </p><br>
+
+	<p>pubg level: <input type="text" size=30 name="rpass"> </p><br>
+
+	<p>Phone no: <input type="text" size=10 name="phone"> </p><br>
+
+	<p>Alt Phone no: <input type="text" size=10 name="aphone"> </p><br>
+
+	<p>select any one option
+		<select  name="subject">
+			<option>solo</option>
+			<option>duo</option>
+			<option>squad</option>
+		</select></p><br>
+
+	<p><input type="submit" value="Submit" name="Submit" onclick="valform()">
+		<input type="reset" value="Reset" name="Reset">
+	</p>
+<P>FOR PRICES <a href="price.html">CLICK HERE</a></p>
+</form>
+</body>
+</html>

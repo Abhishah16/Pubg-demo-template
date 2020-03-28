@@ -1,0 +1,133 @@
+<html>
+<head>
+<style>
+body
+{
+	background-image:"pubg_desperado1.png"
+	font-family:Arial;
+}
+h1
+{
+    color: yellow;
+    margin-left: 20px;
+} 
+</style>
+<script>
+function valform()
+{
+	var name=document.forms["form1"]["Name"];
+	var add=document.forms["form1"]["Address"];
+	var email=document.forms["form1"]["EMail"];
+	var remail=document.forms["form1"]["ALTeMail"];
+	var pass=document.forms["form1"]["Password"];
+	var rpass=document.forms["form1"]["re_Password"];
+	var phone=document.forms["form1"]["Telephone2"];
+	var aphone=document.forms["form1"]["Telephone1"];
+	var subject=document.forms["form1"]["subject"];
+	
+	if(name.value.length>=20)
+	{
+		alert("you have crossed your limits");
+		name.focus();
+		return false;
+	}
+	if(name.value=="")
+	{
+		alert("please enter your name");
+		name.focus();
+		return false;
+	}
+	if(email.value.length>=30)
+	{
+		alert("you have crossed your limits");
+		email.focus();
+		return false;
+	}
+	if(email.value=="")
+	{
+		alert("please enter your email");
+		email.focus();
+		return false;
+	}
+	if(email.value.indexOf("@",0)<0)
+	{
+		alert("please enter a valid E-mail address");
+		email.focus();
+		return false;
+	}
+	if(email.value.indexOf(".",0)<0)
+	{
+		alert("please enter a valid E-mail address");
+		email.focus();
+		return false;
+	}
+	if(remail.value.length>=30)
+	{
+		alert("you have crossed your limits");
+		remail.focus();
+		return false;
+	}
+	if(remail.value=="")
+	{
+		alert("please enter your email");
+		remail.focus();
+		return false;
+	}
+	if(remail.value.indexOf("@",0)<0)
+	{
+		alert("please enter a valid E-mail address");
+		remail.focus();
+		return false;
+	}
+	if(remail.value.indexOf(".",0)<0)
+	{
+		alert("please enter a valid E-mail address");
+		remail.focus();
+		return false;
+	}
+	if(pass.value=="")
+	{
+		alert("please enter your password");
+		pass.focus();
+		return false;
+	}
+	if(rpass.value=="")
+	{
+		alert("please enter your password");
+		rpass.focus();
+		return false;
+	}
+	if(subject.selectedIndex<1)
+	{
+		alert("please select any one option");
+		subject.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body >
+<h1>Registration valform </h1>
+<form name="form1" action=" " onsubmit="return valform()" method="post">
+	<p>Name: <input type="text" size=65 name="Name"> </p><br>	 
+	<p>pubg id: <input type="text" size=65 name="Address"> </p><br>
+	<p>E-mail Address: <input type="text" size=65 name="EMail"> </p><br>
+	<p>Alt E-mail Address: <input type="text" size=65 name="ALTeMail"> </p><br>
+	<p>pubg rank: <input type="text" size=65 name="Password"> </p><br>
+	<p>pubg level: <input type="password" size=65 name="re_Password"> </p><br>
+	<p>Phone no: <input type="text" size=10 name="Telephone2"> </p><br> 
+	<p>Alt Phone no: <input type="text" size=10 name="Telephone1"> </p><br> 	
+	
+	<p>SELECT any one option 
+		<select  name="Subject">
+			<option>solo</option>
+			<option>duo</option>
+			<option>squad</option>
+		</select></p><br>
+	<p><input type="submit" value="Submit" name="Submit">	 
+		<input type="reset" value="Reset" name="Reset"> 
+	</p>		 
+</form>
+</body>					
+</html>

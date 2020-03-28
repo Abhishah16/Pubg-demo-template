@@ -1,0 +1,70 @@
+body
+{
+background-attachment:fixed;
+background-repeat:no-repeat;
+}
+r
+{
+color:red;
+font-size:80;
+}
+a:link, a:visited
+{
+    color:white;
+	
+    text-decoration: none;
+    display: inline-block;
+	font-size:35;
+}
+a:link 
+{
+    background-color: black;
+}
+a:visited 
+{
+    background-color: black;
+}
+a:hover 
+{
+    color:skyblue;
+}
+
+j:link, j:visited
+{
+    color:white;
+	
+    text-decoration: none;
+    display: inline-block;
+	font-size:20;
+}
+j:link 
+{
+    background-color: black;
+}
+j:visited 
+{
+    background-color: black;
+}
+j:hover 
+{
+    color:powderblue;
+}
+
+
+r:hover 
+{
+    color:white;
+}
+p
+{
+color:grey;
+}
+h
+{
+	font-size:90;
+	color:yellow;
+}
+h:hover
+{
+	color:orange;
+}
